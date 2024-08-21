@@ -1,7 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk'
 
 const corsHeaders = {
-	'Access-Control-Allow-Origin': 'https://thesummarizer.pages.dev/',
+	'Access-Control-Allow-Origin': 'https://thesummarizer.pages.dev',
 	'Access-Control-Allow-Methods': 'POST, OPTIONS',
 	'Access-Control-Allow-Headers': 'Content-Type',
 }
@@ -14,7 +14,7 @@ export default {
 
 		if (request.method === 'OPTIONS') {
 			return new Response(null, {
-				status: 204,
+				status: 200,
 				headers: corsHeaders
 			})
 		}
